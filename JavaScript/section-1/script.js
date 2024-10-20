@@ -18,4 +18,6 @@ function funcao(a, b, c){
     console.log(total, a, b, c)
 }
 
+
+
 funcao(1, 2, 3, 4, 5, 6, 7)
