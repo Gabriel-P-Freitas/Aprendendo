@@ -1,11 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @media screen and (max-width: 992px) {
   body .box {
     width: clamp(22.5rem, 52vw, 70%) !important;
   }
 }
 body input, body h1, body p, body figure, body ul, body button {
-  padding: 0 !important;
-  margin: 0 !important;
+  padding: 0;
+  margin: 0;
 }
 body .box {
   width: 32rem;
@@ -14,5 +17,5 @@ body .box .bg-info-subtle {
   transition: all 0.3s ease-in;
 }
 body .box .bg-info-subtle:hover {
-  background-color: #b0effd !important;
+  background-color: #446491 !important;
 }/*# sourceMappingURL=index.css.map */

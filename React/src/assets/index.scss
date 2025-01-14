@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body{
     @media screen and (max-width:992px) {
        .box{
@@ -5,15 +9,16 @@ body{
        }
     }
     input, h1, p, figure, ul, button{
-        padding: 0 !important;
-        margin: 0 !important;
+        padding: 0;
+        margin: 0;
     }
+    
     .box {
         width: 32rem;
         .bg-info-subtle{
             transition: all 0.3s ease-in;
             &:hover{
-                background-color: #b0effd !important;
+                background-color: #446491  !important;
             }
         }
     }  

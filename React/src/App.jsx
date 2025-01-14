@@ -10,28 +10,40 @@ function App(){
       'id': 1,
       'title': 'Estudar React',
       'description': 'Quero estudar react para me tornar um desenvolvedor Full Stack  ',  
-      iscompleted: false,
+      isCompleted: false,
       
     },
     {
       'id': 2,
       'title': 'Estudar Tailwind CSS',
       'description': 'Quero estudar Tailwind para me tornar um desenvolvedor Full Stack sem escrever CSS',  
-      iscompleted: false,
+      isCompleted: false,
     },
     {
       'id': 3,
       'title': 'Estudar TypeScript',
       'description': 'Quero estudar TypeScript para integrar com o meu react.jsx',  
-      iscompleted: false,
+      isCompleted: false,
     }
   ]);
+  function onTaskClick(taskId){
+    const newTasks = tasks.map(task =>{
+      if (task.id == taskId){
+        return{
+          ...task, isCompleted : !task.isCompleted
+        }
+      }
+      return task;
+    })
+    setTasks(newTasks);
+
+  }
 
   return(
-    <div className="box container text-center" id="root">
-      <h1 className="py-4">Gerenciador de Tarefas</h1>
+    <div className="box py-12 container mx-auto text-center" id="root">
+      <h1 className="text-3xl py-4">Gerenciador de Tarefas</h1>
       <TaskAdicionar/>
-      <Tasks tasks={tasks}/>
+      <Tasks tasks={tasks} onTaskClick={onTaskClick}/>
     </div>
   );
 };
