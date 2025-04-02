@@ -80,3 +80,10 @@ button:hover {
 h1 {
     text-align: center;
 }
+
+.error {
+    background-color: rgb(224, 52, 52);
+    color: white;
+    padding: 8px 8px;
+    border-radius: 4px;
+}
